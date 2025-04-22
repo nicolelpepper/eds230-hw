@@ -17,7 +17,7 @@ library(dplyr)
 
 ```{r}
 # Read in climate data
-clim_data <- read.table(here("HW2","data","clim.txt"), header = TRUE)
+clim_data <- read.table(here("HW3","data","clim.txt"), header = TRUE)
 ```
 
 ```{r}
@@ -137,7 +137,8 @@ yield_uncertainty <- clim_data_clean |>
 ggplot(yield_uncertainty, aes(x = year, y = yield_anomaly, group = year)) +
   geom_boxplot(fill = "cornflowerblue") +
   labs(
-    title = "Yield Anomaly by Year with Uncertainty For Temp & Precip",
+    title = "Yield anomaly for each year",
+    subtitle = "Accounting for uncertainty in the parameters Temp & Precip",
     x = "Year",
     y = "Yield Anomaly (tons/acre)") +
   theme_minimal()

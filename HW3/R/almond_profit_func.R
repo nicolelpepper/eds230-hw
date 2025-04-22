@@ -1,12 +1,13 @@
-#' Create function that computes almond profit. 
+#' Create function that computes almond profit from time series climate data.
 #' Based on Lobell et al., 2006 
-#'
-#' @param cost_acres Numeric - 
-#' @param baseline_proft (0.9)
-#' @param yield_anomaly
-#' @param avg_yield Numeric - list of numeric vectors representing the average yield (tons/acre)
-
-#' @return mean_profit Numeric - profit ($)
+#' @param Temp_Feb Numeric - Average min daily temperature for February (C)
+#' @param Precip_Jan Numeric - Total monthly precipitation for January (mm)
+#' @param T_Coef1 Numeric - Regression coefficient on February minimum temperature (Celcius).
+#' @param T_Coef2 Numeric - Regression coefficient on February maximum temperature squared (Celcius).
+#' @param P_Coef1 Numeric - Regression coefficient on January total precipitation (mm).
+#' @param P_Coef2 Numeric-  Regression coefficient on January total precipitation squared (mm).
+#' @param intercept Numeric - Regression intercept term.
+#' @return profit per acre ($)
 #'
 #' @export
 #' 

@@ -4,7 +4,11 @@
 #'
 #' @param Temp_Feb Numeric - Average min daily temperature for February (C)
 #' @param Precip_Jan Numeric - Total monthly precipitation for January (mm)
-#' @param parameters Numeric - list of numeric vectors representing the coefficient parameters for climate variables (mm)
+#' @param T_Coef1 Numeric - Regression coefficient on February minimum temperature (Celcius).
+#' @param T_Coef2 Numeric - Regression coefficient on February maximum temperature squared (Celcius).
+#' @param P_Coef1 Numeric - Regression coefficient on January total precipitation (mm).
+#' @param P_Coef2 Numeric-  Regression coefficient on January total precipitation squared (mm).
+#' @param intercept Numeric - Regression intercept term.
 
 #' @return almond_yield Numeric - almond yield anomaly response to climate (tons/acre)
 #'
